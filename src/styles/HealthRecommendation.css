@@ -1,0 +1,445 @@
+/**
+ * HealthRecommendation.css
+ * Styles for Health Recommendation Component
+ */
+
+.health-recommendation-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: calc(100vh - 100px);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header Section */
+.health-recommendation-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.health-recommendation-header h1 {
+  color: #2c3e50;
+  margin: 0 0 10px 0;
+  font-size: 2.5rem;
+}
+
+.health-recommendation-header p {
+  color: #7f8c8d;
+  font-size: 1.1rem;
+  margin: 0 0 20px 0;
+}
+
+/* Button Styles */
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  margin: 10px 5px;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+.btn-success {
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  color: white;
+  border: none;
+  padding: 14px 32px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  width: 100%;
+}
+
+.btn-success:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(17, 153, 142, 0.4);
+}
+
+.btn-success:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Form Styles */
+.health-form-card {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  margin-bottom: 30px;
+  animation: slideInDown 0.3s ease;
+}
+
+.health-form-card h2 {
+  color: #2c3e50;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group select {
+  padding: 12px 15px;
+  border: 2px solid #ecf0f1;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  background: #f8f9fa;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #667eea;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* Recommendations Section */
+.recommendations-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+@media (max-width: 1024px) {
+  .recommendations-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Recommendation Card Styles */
+.recommendation-card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  animation: fadeIn 0.5s ease;
+}
+
+.diet-card {
+  border-left: 5px solid #f39c12;
+}
+
+.exercise-card {
+  border-left: 5px solid #e74c3c;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #ecf0f1;
+}
+
+.card-header h2 {
+  color: #2c3e50;
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.condition-badge,
+.intensity-badge {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.intensity-badge {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+/* Priority Section */
+.priority-section {
+  background: #fff3cd;
+  border-left: 4px solid #ffc107;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+}
+
+.priority-section h3 {
+  color: #856404;
+  margin: 0 0 10px 0;
+  font-size: 1rem;
+}
+
+.priority-section ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.priority-item {
+  color: #856404;
+  margin: 8px 0;
+  font-weight: 500;
+}
+
+/* Recommendations Group */
+.recommendations-group,
+.targets-section {
+  margin-bottom: 20px;
+}
+
+.recommendations-group h3,
+.targets-section h3,
+.precautions-section h3,
+.food-list h3 {
+  color: #2c3e50;
+  margin: 0 0 15px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.recommendations-group ul,
+.targets-section ul,
+.precautions-section ul {
+  margin: 0;
+  padding-left: 20px;
+  list-style: none;
+}
+
+.recommendations-group li,
+.targets-section li {
+  color: #555;
+  margin: 10px 0;
+  padding-left: 25px;
+  position: relative;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.recommendations-group li:before,
+.targets-section li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #11998e;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Precautions Section */
+.precautions-section {
+  background: #f8d7da;
+  border-left: 4px solid #dc3545;
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.precautions-section h3 {
+  color: #721c24;
+  margin: 0 0 10px 0;
+}
+
+.precautions-section ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.precaution-item {
+  color: #721c24;
+  margin: 8px 0;
+  font-weight: 500;
+}
+
+/* Food List Styles */
+.food-list {
+  margin-bottom: 20px;
+}
+
+.food-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.food-chip {
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: inline-block;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.food-chip.include {
+  background: #d4edda;
+  color: #155724;
+  border-color: #11998e;
+}
+
+.food-chip.include:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(17, 153, 142, 0.2);
+}
+
+.food-chip.avoid {
+  background: #f8d7da;
+  color: #721c24;
+  border-color: #dc3545;
+}
+
+.food-chip.avoid:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(220, 53, 69, 0.2);
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 80px 20px;
+  background: white;
+  border-radius: 12px;
+  margin-top: 30px;
+}
+
+.empty-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.empty-state h2 {
+  color: #2c3e50;
+  margin: 0 0 15px 0;
+  font-size: 1.8rem;
+}
+
+.empty-state p {
+  color: #7f8c8d;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* Animations */
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .health-recommendation-container {
+    padding: 15px;
+  }
+
+  .health-recommendation-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .health-form-card {
+    padding: 20px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .recommendation-card {
+    padding: 20px;
+  }
+
+  .card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .recommendations-section {
+    gap: 15px;
+  }
+
+  .food-chips {
+    gap: 8px;
+  }
+
+  .food-chip {
+    padding: 6px 12px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .health-recommendation-header {
+    padding: 15px;
+  }
+
+  .health-recommendation-header h1 {
+    font-size: 1.3rem;
+  }
+
+  .health-recommendation-header p {
+    font-size: 0.95rem;
+  }
+
+  .btn-primary {
+    width: 100%;
+  }
+
+  .recommendations-group li,
+  .targets-section li {
+    font-size: 0.85rem;
+  }
+}

@@ -1,0 +1,632 @@
+/**
+ * MedicineReminder.css
+ * Styles for Medicine Reminder Component
+ */
+
+.medicine-reminder-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  min-height: calc(100vh - 100px);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header Section */
+.medicine-reminder-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.medicine-reminder-header h1 {
+  color: #2c3e50;
+  margin: 0 0 10px 0;
+  font-size: 2.5rem;
+}
+
+.medicine-reminder-header p {
+  color: #7f8c8d;
+  font-size: 1.1rem;
+  margin: 0 0 20px 0;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  margin: 10px 5px;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+}
+
+/* Form Card Styles */
+.medicine-form-card {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  margin-bottom: 30px;
+  animation: slideInDown 0.3s ease;
+}
+
+.medicine-form-card h2 {
+  color: #2c3e50;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+.form-group input {
+  padding: 12px 15px;
+  border: 2px solid #ecf0f1;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  background: #f8f9fa;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #667eea;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+/* Time Input Group */
+.time-input-group {
+  display: flex;
+  gap: 10px;
+  align-items: stretch;
+}
+
+.time-input-group input {
+  flex: 1;
+}
+
+.btn-secondary {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 0 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+/* Times List */
+.times-list {
+  margin-bottom: 25px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #3498db;
+}
+
+.times-list h3 {
+  color: #2c3e50;
+  margin: 0 0 15px 0;
+  font-size: 1.1rem;
+}
+
+.time-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.time-chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: white;
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: 2px solid #3498db;
+  color: #2980b9;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.time-chip .remove-btn {
+  background: none;
+  border: none;
+  color: #e74c3c;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0;
+  transition: all 0.2s ease;
+}
+
+.time-chip .remove-btn:hover {
+  color: #c0392b;
+  font-weight: bold;
+}
+
+/* Submit Button */
+.btn-success {
+  background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+  color: white;
+  border: none;
+  padding: 14px 32px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+  width: 100%;
+}
+
+.btn-success:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(17, 153, 142, 0.4);
+}
+
+.btn-success:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Medicines List */
+.medicines-list {
+  margin-top: 30px;
+}
+
+.medicines-list h2 {
+  color: white;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.medicines-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* Medicine Card */
+.medicine-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  border-left: 5px solid #e74c3c;
+  animation: fadeIn 0.5s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.medicine-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.2);
+}
+
+.medicine-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.medicine-name {
+  color: #2c3e50;
+  margin: 0;
+  font-size: 1.3rem;
+  flex: 1;
+}
+
+.btn-delete {
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  opacity: 0.7;
+}
+
+.btn-delete:hover {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.medicine-details {
+  margin-bottom: 15px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #ecf0f1;
+}
+
+.medicine-details p {
+  margin: 8px 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.medicine-details strong {
+  color: #2c3e50;
+}
+
+/* Reminder Times */
+.reminder-times {
+  margin-bottom: 15px;
+}
+
+.reminder-times h4 {
+  color: #2c3e50;
+  margin: 0 0 10px 0;
+  font-size: 1rem;
+}
+
+.time-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.time-badge {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.empty-times {
+  color: #95a5a6;
+  font-style: italic;
+}
+
+/* Medicine Meta */
+.medicine-meta {
+  color: #95a5a6;
+  font-size: 0.85rem;
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: 1px solid #ecf0f1;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 80px 20px;
+  background: white;
+  border-radius: 12px;
+  margin-top: 30px;
+}
+
+.empty-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.empty-state h2 {
+  color: #2c3e50;
+  margin: 0 0 15px 0;
+  font-size: 1.8rem;
+}
+
+.empty-state p {
+  color: #7f8c8d;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* Reminder Modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+.reminder-modal {
+  background: white;
+  border-radius: 16px;
+  padding: 40px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.4s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.reminder-modal:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #f093fb 0%, #f5576c 100%);
+}
+
+.modal-content {
+  text-align: center;
+}
+
+.reminder-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  animation: pulse 1.5s ease infinite;
+}
+
+.reminder-modal h2 {
+  color: #2c3e50;
+  margin: 0 0 25px 0;
+  font-size: 1.6rem;
+}
+
+.reminder-details {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.reminder-field {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 12px 0;
+  padding: 8px 0;
+  border-bottom: 1px solid #ecf0f1;
+}
+
+.reminder-field:last-child {
+  border-bottom: none;
+}
+
+.reminder-field .label {
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 0.9rem;
+}
+
+.reminder-field .value {
+  color: #e74c3c;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+/* Modal Actions */
+.modal-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.btn-taken,
+.btn-snooze,
+.btn-skip {
+  padding: 14px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.btn-taken {
+  background: linear-gradient(135deg, #38ef7d 0%, #11998e 100%);
+  color: white;
+}
+
+.btn-taken:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(17, 153, 142, 0.4);
+}
+
+.btn-snooze {
+  background: linear-gradient(135deg, #f5af19 0%, #f12711 100%);
+  color: white;
+}
+
+.btn-snooze:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(245, 81, 17, 0.4);
+}
+
+.btn-skip {
+  background: #ecf0f1;
+  color: #7f8c8d;
+}
+
+.btn-skip:hover {
+  background: #bdc3c7;
+  color: #2c3e50;
+}
+
+.reminder-note {
+  color: #95a5a6;
+  font-size: 0.85rem;
+  margin: 0;
+  font-style: italic;
+}
+
+/* Animations */
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .medicine-reminder-container {
+    padding: 15px;
+  }
+
+  .medicine-reminder-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .medicine-form-card {
+    padding: 20px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .medicines-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .time-input-group {
+    flex-direction: column;
+  }
+
+  .time-input-group input {
+    width: 100%;
+  }
+
+  .reminder-modal {
+    padding: 30px 20px;
+  }
+
+  .modal-actions {
+    flex-direction: column;
+  }
+
+  .btn-taken,
+  .btn-snooze,
+  .btn-skip {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .medicine-reminder-header {
+    padding: 15px;
+  }
+
+  .medicine-reminder-header h1 {
+    font-size: 1.3rem;
+  }
+
+  .medicine-reminder-header p {
+    font-size: 0.95rem;
+  }
+
+  .btn-primary {
+    width: 100%;
+  }
+
+  .medicines-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .medicine-card {
+    padding: 15px;
+  }
+
+  .medicine-name {
+    font-size: 1.1rem;
+  }
+
+  .reminder-modal {
+    width: 95%;
+    padding: 25px 15px;
+  }
+
+  .reminder-icon {
+    font-size: 2.5rem;
+  }
+
+  .reminder-modal h2 {
+    font-size: 1.3rem;
+  }
+
+  .reminder-field {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+}

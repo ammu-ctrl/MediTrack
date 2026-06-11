@@ -1,0 +1,102 @@
+/* ALARM MODAL */
+#alarm-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.alarm-box {
+    background: white;
+    border-radius: 12px;
+    padding: 40px 32px;
+    text-align: center;
+    max-width: 360px;
+    width: 90%;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: alarmPop 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes alarmPop {
+    from { transform: scale(0.75); opacity: 0; }
+    to   { transform: scale(1);    opacity: 1; }
+}
+
+.alarm-icon {
+    font-size: 52px;
+    margin-bottom: 12px;
+    animation: alarmShake 0.5s ease infinite;
+}
+
+@keyframes alarmShake {
+    0%, 100% { transform: rotate(-12deg); }
+    50%       { transform: rotate(12deg);  }
+}
+
+.alarm-title {
+    color: #333;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.alarm-med-name {
+    color: #667eea;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.alarm-med-detail {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 28px;
+}
+
+.alarm-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.alarm-btn-taken {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 13px;
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.alarm-btn-taken:hover { background: #764ba2; }
+
+.alarm-btn-snooze {
+    background: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffc107;
+    padding: 11px;
+    border-radius: 7px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.alarm-btn-snooze:hover { background: #ffe69c; }
+
+.alarm-btn-dismiss {
+    background: none;
+    color: #aaa;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 7px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.alarm-btn-dismiss:hover { color: #e74c3c; border-color: #e74c3c; }

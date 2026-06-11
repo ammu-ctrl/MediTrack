@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Assistant - Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <h1>Healthcare Assistant</h1>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><button onclick="logout()">Logout</button></li>
+        </ul>
+    </nav>
+
+    <div class="dashboard-container">
+        <h2>Health Analytics & Medication Adherence</h2>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <h3>Adherence Rate</h3>
+                <p class="stat-value" id="adherence-rate">0%</p>
+            </div>
+            
+            <div class="stat-card">
+                <h3>Medications Taken</h3>
+                <p class="stat-value" id="meds-taken">0</p>
+            </div>
+            
+            <div class="stat-card">
+                <h3>Medications Missed</h3>
+                <p class="stat-value" id="meds-missed">0</p>
+            </div>
+            
+            <div class="stat-card">
+                <h3>Streak Days</h3>
+                <p class="stat-value" id="streak-days">0</p>
+            </div>
+        </div>
+
+        <div class="charts-container">
+            <div class="chart-box">
+                <h3>Weekly Adherence</h3>
+                <canvas id="weeklyChart"></canvas>
+            </div>
+            
+            <div class="chart-box">
+                <h3>Medication Distribution</h3>
+                <canvas id="medicationChart"></canvas>
+            </div>
+        </div>
+
+        <div class="analytics-section">
+            <h3>Recent Activity</h3>
+            <div id="activity-log"></div>
+        </div>
+    </div>
+
+    <script src="js/firebase-config.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Assistant - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <h1>Healthcare Assistant</h1>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><button onclick="logout()">Logout</button></li>
+        </ul>
+    </nav>
+
+    <div class="main-container">
+        <div class="welcome-section">
+            <h2>Welcome, <span id="user-name"></span>!</h2>
+            <p>Your AI-powered healthcare assistant is here to help you manage your medications and health.</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>💊 Medication Reminders</h3>
+                <p>Get timely reminders for your medications</p>
+                <button onclick="navigateTo('medication.html')">Manage Medications</button>
+            </div>
+            
+            <div class="feature-card">
+                <h3>🤖 AI Chat Assistant</h3>
+                <p>Chat with your healthcare assistant</p>
+                <button onclick="openChat()">Start Chat</button>
+            </div>
+            
+            <div class="feature-card">
+                <h3>📊 Health Analytics</h3>
+                <p>View your medication adherence and health metrics</p>
+                <button onclick="navigateTo('dashboard.html')">View Analytics</button>
+            </div>
+        </div>
+
+        <div id="chat-widget" class="chat-widget" style="display: none;">
+            <div id="chat-messages"></div>
+            <input type="text" id="chat-input" placeholder="Ask me anything...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <!-- ALARM MODAL -->
+    <div id="alarm-modal" style="display:none;">
+        <div class="alarm-box">
+            <div class="alarm-icon">🔔</div>
+            <h2 class="alarm-title">Medication Reminder</h2>
+            <p class="alarm-med-name" id="alarm-med-name"></p>
+            <p class="alarm-med-detail" id="alarm-med-detail"></p>
+            <div class="alarm-actions">
+                <button class="alarm-btn-taken"   onclick="dismissAlarm('taken')">✓ Mark as Taken</button>
+                <button class="alarm-btn-snooze"  onclick="snoozeAlarm()">💤 Snooze 5 min</button>
+                <button class="alarm-btn-dismiss" onclick="dismissAlarm('missed')">✕ Dismiss</button>
+            </div>
+        </div>
+    </div>
+    <!-- END ALARM MODAL -->
+
+    <script src="js/firebase-config.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/chat.js"></script>
+    <script src="js/medication.js"></script>
+</body>
+</html>
